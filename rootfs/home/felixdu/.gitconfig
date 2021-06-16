@@ -1,0 +1,39 @@
+[user]
+	name = Felix Du
+	email = felix.du@nokia-sbell.com
+[diff]
+	tool = vimdiff
+	#submodule = diff
+    	#submodule = log
+	#algorithm = histogram
+[difftool]
+	prompt = false
+[color]
+	ui = true
+[log]
+	date = local
+[core]
+    #pager = less -x1,5 # 4 spaces for tab
+    quotepath = false
+    filemode = false
+    editor = vim -X
+[merge]
+	tool = bc
+	prompt = true
+#[sendemail]
+#    smtpEncryption = tls
+#    smtpServer = smtp.gmail.com
+#    smtpUser = durd07@gmail.com
+#    smtpServerPort = 587
+#    smtpPass = iszfmqrhhpdtyftk
+[alias]
+	l = log --graph --pretty=oneline
+[pull]
+	rebase = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main

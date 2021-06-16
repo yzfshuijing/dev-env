@@ -1,0 +1,187 @@
+Xft.dpi:108
+! ------------------------------------------------------------------------------
+! Colour Configuration
+! ------------------------------------------------------------------------------
+
+! special
+*.foreground:   #d8dee8
+*.background:   #2f343f
+*.cursorColor:  #b48ead
+
+! black
+*.color0  : #4b5262
+*.color8  : #434a5a
+
+! red
+*.color1  : #bf616a
+*.color9  : #b3555e
+
+! green
+*.color2  : #a3be8c
+*.color10 : #93ae7c
+
+! yellow
+*.color3  : #ebcb8b
+*.color11 : #dbbb7b
+
+! blue
+*.color4  : #81a1c1
+*.color12 : #7191b1
+
+! magenta
+*.color5  : #b48ead
+*.color13 : #a6809f
+
+! cyan
+*.color6  : #89d0bA
+*.color14 : #7dbba8
+
+! white
+*.color7  : #e5e9f0
+*.color15 : #d1d5dc
+
+! ------------------------------------------------------------------------------
+! Font configuration
+! ------------------------------------------------------------------------------
+URxvt.font:xft:CaskaydiaCove NF:style=SemiLight:size=12:antialias=true,xft:CaskaydiaCove NF:size=11.5:antialias=true,xft:CaskaydiaCove NF:size=12.5:antialias=true,xft:CaskaydiaCove NF:size=11.5,xft:CaskaydiaCove NF:size=11.5
+
+! ------------------------------------------------------------------------------
+! Xft Font Configuration
+! ------------------------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+! ------------------------------------------------------------------------------
+! URxvt configs
+! ------------------------------------------------------------------------------
+
+! font spacing
+URxvt*letterSpace:		0
+URxvt.lineSpace:		0
+
+! general settings
+URxvt*saveline:			15000
+URxvt*termName:			rxvt-256color
+URxvt*iso14755:			false
+URxvt*urgentOnBell:		true
+
+! appearance
+URxvt*depth:			32
+URxvt*scrollBar:		false
+URxvt*scrollBar_right:	false
+!URxvt*internalBorder:	1
+!URxvt*externalBorder:	0
+!URxvt.geometry:			84x22
+!URxvt.borderColor:#81a1c1
+
+! perl extensions
+URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select,resize-font
+
+! macros for clipboard and selection
+URxvt.copyCommand:		xclip -i -selection clipboard
+URxvt.pasteCommand:		xclip -o -selection clipboard
+URxvt.keysym.M-c:		perl:clipboard:copy
+URxvt.keysym.M-v:		perl:clipboard:paste
+URxvt.keysym.M-C-v:		perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape:	perl:keyboard-select:activate
+URxvt.keysym.M-s:		perl:keyboard-select:search
+URxvt.keysym.M-u:		perl:url-select:select_next
+URxvt.urlLauncher:		google-chrome-stable
+URxvt.underlineURLs:	true
+URxvt.urlButton:		1
+
+! scroll one line
+URxvt.keysym.Shift-Up:		command:\033]720;1\007
+URxvt.keysym.Shift-Down:	command:\033]721;1\007
+
+! control arrow
+URxvt.keysym.Control-Up:	\033[1;5A
+URxvt.keysym.Control-Down:	\033[1;5B
+URxvt.keysym.Control-Right:	\033[1;5C
+URxvt.keysym.Control-Left:	\033[1;5D
+
+! ------------------------------------------------------------------------------
+! Rofi configs
+! ------------------------------------------------------------------------------
+
+rofi.color-enabled: true
+rofi.color-window: #2e3440, #2e3440, #2e3440
+rofi.color-normal: #2e3440, #d8dee9, #2e3440, #2e3440, #bf616a
+rofi.color-active: #2e3440, #b48ead, #2e3440, #2e3440, #93e5cc
+rofi.color-urgent: #2e3440, #ebcb8b, #2e3440, #2e3440, #ebcb8b
+rofi.modi: run,drun,window
+
+! ------------------------------------------------------------------------------
+! Dmenu configs
+! ------------------------------------------------------------------------------
+
+dmenu.selforeground:	    #d8dee9
+dmenu.background:	        #2e3440
+dmenu.selbackground:	    #bf616a
+dmenu.foreground:	        #d8dee9
+
+
+
+!!!$HOME/.Xresources
+!URxvt.preeditType:Root
+!!!调整此处设置输入法
+!!URxvt.inputMethod:fcitx
+!!!颜色设置
+!URxvt.depth:32
+!!!中括号内数表示透明度
+!URxvt.inheritPixmap:true
+URxvt.background:#211F1C
+!!URxvt.foreground:#ffffff
+!!URxvt.colorBD:Gray95
+!!URxvt.colorUL:Green
+!!URxvt.color1:Red2
+!!URxvt.color4:RoyalBlue
+!!URxvt.color5:Magenta2
+!!URxvt.color8:Gray50
+!!URxvt.color10:Green2
+!!URxvt.color12:DodgerBlue
+!!URxvt.color14:Cyan2
+!!URxvt.color15:Gray95
+!!!URL操作
+!URxvt.urlLauncher:google-chrome-stable
+!URxvt.matcher.button:1
+!Urxvt.perl-ext-common:matcher
+!!!滚动条设置
+!URxvt.scrollBar:False
+!URxvt.scrollBar_floating:False
+!URxvt.scrollstyle:plain
+!!!滚屏设置
+!URxvt.mouseWheelScrollPage:True
+!URxvt.scrollTtyOutput:False
+!URxvt.scrollWithBuffer:True
+!URxvt.scrollTtyKeypress:True
+!!!光标闪烁
+!URxvt.cursorBlink:True
+!URxvt.saveLines:3000
+!!!边框
+!URxvt.borderLess:False
+!!!字体设置
+!Xft.dpi:108
+!!!URxvt.font:xft:Courier New:size=12:antialias=true,xft:Courier New:size=11.5:antialias=true,xft:Courier New:size=12.5:antialias=true,xft:Courier New:size=11.5,xft:Font Awesome 5 Brand:size=11.5
+!URxvt.font:xft:CaskaydiaCove NF:style=SemiLight:size=12:antialias=true,xft:CaskaydiaCove NF:size=11.5:antialias=true,xft:CaskaydiaCove NF:size=12.5:antialias=true,xft:CaskaydiaCove NF:size=11.5,xft:CaskaydiaCove NF:size=11.5
+!
+!xterm*ScrollBar: false
+!XTerm*rightScrollBar:  true
+!xterm*faceName: Courier
+!xterm*faceNameDoublesize: WenQuanYi Micro Hei
+!xterm*faceSize: 12
+!xterm*allowBoldFonts: true
+!xterm*foreground: grey100
+!xterm*background: rgb:30/10/10
+!xterm*background: black
+!
+!!xterm font and locale
+!xterm.locale:true
+!xterm.utf8: true
+!xterm*utf8Title:true
+!xterm*fontMenu*fontdefault*Label:Default
