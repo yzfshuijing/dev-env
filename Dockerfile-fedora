@@ -27,8 +27,10 @@ RUN dnf install -y i3 rofi xrandr xrdb tigervnc-server libXcursor
 COPY ./rootfs /
 
 # RUN groupadd infi
-RUN useradd -ms /usr/bin/zsh infi
-RUN chown -R infi:infi /home/infi
+RUN useradd -ms /usr/bin/zsh infi 
+RUN chown -hR infi:infi /home/infi
+RUN cd /home/infi
+RUN chown -R infi:infi .
 
 RUN mkdir -p /etc/sudoers.d
 RUN echo "infi ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/infi && chmod 0440 /etc/sudoers.d/infi
