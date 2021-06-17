@@ -384,7 +384,7 @@ au VimEnter * AirlineToggle
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 "autocmd FileType markdown setlocal tabstop=8 softtabstop=8 shiftwidth=8 expandtab
 
-autocmd BufRead,BufNewFile /home/infi/src/service-mesh/* setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd BufRead,BufNewFile /home/infi/src/service-mesh/istio/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
-autocmd BufRead,BufNewFile /home/infi/src/service-mesh/istio-github/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
-autocmd BufRead,BufNewFile /home/infi/src/service-mesh/envoy_discovery/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 expandtab
+"autocmd BufRead,BufNewFile /home/infi/src/service-mesh/* setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+"autocmd BufRead,BufNewFile /home/infi/src/service-mesh/istio/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
+"autocmd BufRead,BufNewFile /home/infi/src/service-mesh/istio-github/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
+"autocmd BufRead,BufNewFile /home/infi/src/service-mesh/envoy_discovery/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 expandtab
