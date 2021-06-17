@@ -1,6 +1,6 @@
 FROM fedora:34
 
-# docker build --build-arg http_proxy=http://10.158.100.9:8080 --build-arg https_proxy=http://10.158.100.9:8080 -t felixdu.hz.dynamic.nsn-net.net/dev:fedora-34 -f Dockerfile-fedora .
+# docker build --build-arg http_proxy=http://10.158.100.9:8080 --build-arg https_proxy=http://10.158.100.9:8080 -t infi.hz.dynamic.nsn-net.net/dev:fedora-34 -f Dockerfile-fedora .
 
 # ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
@@ -17,27 +17,27 @@ RUN dnf install -y vim universal-ctags global fzf ripgrep \
 
 # libXcursor is needed for Alacritty X11
 RUN dnf install -y i3 rofi xrandr xrdb tigervnc-server libXcursor
-# COPY ./rootfs/home/felixdu/.config/i3 /home/felixdu/.config
+# COPY ./rootfs/home/infi/.config/i3 /home/infi/.config
 # COPY ./rootfs/etc/tigervnc/vncserver.users /etc/tigervnc/
 
 # RUN dnf install -y sway wayvnc
-# COPY ./rootfs/home/felixdu/.config/sway /home/felixdu/.config
+# COPY ./rootfs/home/infi/.config/sway /home/infi/.config
 
 # RUN dnf install -y vim tigervnc-server i3 zsh sway wayvnc git procps sudo
 COPY ./rootfs /
 
-# RUN groupadd felixdu
-RUN useradd -ms /usr/bin/zsh felixdu
-RUN chown -R felixdu:felixdu /home/felixdu
+# RUN groupadd infi
+RUN useradd -ms /usr/bin/zsh infi
+RUN chown -R infi:infi /home/infi
 
 RUN mkdir -p /etc/sudoers.d
-RUN echo "felixdu ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/felixdu && chmod 0440 /etc/sudoers.d/felixdu
-# RUN echo "felixdu ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/docker && chmod 0440 /etc/sudoers.d/docker
+RUN echo "infi ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/infi && chmod 0440 /etc/sudoers.d/infi
+# RUN echo "infi ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/docker && chmod 0440 /etc/sudoers.d/docker
 
 
-# Change user to felixdu; following commands are run with user felixdu
-USER felixdu
-WORKDIR /home/felixdu
+# Change user to infi; following commands are run with user infi
+USER infi
+WORKDIR /home/infi
 
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-COPY ./rootfs/home/felixdu/.zshrc $WORKDIR
+COPY ./rootfs/home/infi/.zshrc $WORKDIR

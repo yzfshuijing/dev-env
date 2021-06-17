@@ -113,7 +113,7 @@ let g:gutentags_auto_add_gtags_cscope = 1  "gutentags 自动加载 gtags 数据�
 "   silent! call mkdir(s:vim_tags, 'p')
 "endif
 "let $GTAGSLABEL = 'native-pygments'
-"let $GTAGSCONF = '/home/felixdu/.gtags.conf'
+"let $GTAGSCONF = '/home/infi/.gtags.conf'
 let g:gutentags_define_advanced_commands = 1
 let g:gutentags_trace = 0
 
@@ -384,7 +384,7 @@ au VimEnter * AirlineToggle
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 "autocmd FileType markdown setlocal tabstop=8 softtabstop=8 shiftwidth=8 expandtab
 
-autocmd BufRead,BufNewFile /home/felixdu/src/service-mesh/* setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd BufRead,BufNewFile /home/felixdu/src/service-mesh/istio/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
-autocmd BufRead,BufNewFile /home/felixdu/src/service-mesh/istio-github/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
-autocmd BufRead,BufNewFile /home/felixdu/src/service-mesh/envoy_discovery/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 expandtab
+autocmd BufRead,BufNewFile /home/infi/src/service-mesh/* setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd BufRead,BufNewFile /home/infi/src/service-mesh/istio/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
+autocmd BufRead,BufNewFile /home/infi/src/service-mesh/istio-github/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
+autocmd BufRead,BufNewFile /home/infi/src/service-mesh/envoy_discovery/* setlocal tabstop=8 shiftwidth=8 softtabstop=8 expandtab

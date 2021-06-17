@@ -6,19 +6,19 @@ ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN dnf install -y vim git-core tmux zsh
-COPY ./rootfs/home/felixdu/.tmux.conf /home/felixdu/
-COPY ./rootfs/home/felixdu/.gitconfig /home/felixdu/
+COPY ./rootfs/home/infi/.tmux.conf /home/infi/
+COPY ./rootfs/home/infi/.gitconfig /home/infi/
 
-# RUN groupadd felixdu
-RUN useradd -ms /usr/bin/zsh felixdu
-RUN chown -R felixdu:felixdu /home/felixdu
+# RUN groupadd infi
+RUN useradd -ms /usr/bin/zsh infi
+RUN chown -R infi:infi /home/infi
 
 RUN mkdir -p /etc/sudoers.d
-RUN echo "felixdu ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/felixdu && chmod 0440 /etc/sudoers.d/felixdu
+RUN echo "infi ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/infi && chmod 0440 /etc/sudoers.d/infi
 
-# Change user to felixdu; following commands are run with user felixdu
-USER felixdu
-WORKDIR /home/felixdu
+# Change user to infi; following commands are run with user infi
+USER infi
+WORKDIR /home/infi
 
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-COPY ./rootfs/home/felixdu/.zshrc $WORKDIR
+COPY ./rootfs/home/infi/.zshrc $WORKDIR
